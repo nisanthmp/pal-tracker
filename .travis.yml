@@ -4,7 +4,7 @@ notifications:
   email: false
 env:
   - RELEASE_TAG="release-$TRAVIS_BUILD_NUMBER"
-if: tag IS blank OR branch = conditionals
+if: tag IS blank
 
 jobs:
   include:
@@ -23,6 +23,7 @@ jobs:
         file: "build/libs/pal-tracker.jar"
         skip_cleanup: true
     - stage: deploy to cf
+      if: branch = master
       language: bash
       script:
         - echo "Downloading $RELEASE_TAG"
