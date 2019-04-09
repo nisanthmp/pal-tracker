@@ -9,7 +9,7 @@ if: tag IS blank
 
 jobs:
   include:
-    if : RELEASE_TAG IS release-3
+    if : RELEASE_TAG = release-3
     - stage: build and publish
       language: java
       jdk: openjdk11
