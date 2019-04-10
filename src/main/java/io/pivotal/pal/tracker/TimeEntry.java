@@ -1,7 +1,5 @@
 package io.pivotal.pal.tracker;
 
-import org.springframework.util.StringUtils;
-
 import java.time.LocalDate;
 
 public class TimeEntry {
