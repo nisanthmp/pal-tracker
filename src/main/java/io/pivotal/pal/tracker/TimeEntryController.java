@@ -20,7 +20,7 @@ public class TimeEntryController {
         ResponseEntity<TimeEntry> responseEntity = null;
         TimeEntry timeEntry = timeEntryRepository.create(timeEntryToCreate);
         if(timeEntry != null){
-            responseEntity = new ResponseEntity<>(timeEntryToCreate, HttpStatus.CREATED);
+            responseEntity = new ResponseEntity<>(timeEntry, HttpStatus.CREATED);
         }
         return responseEntity;
     }
